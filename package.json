@@ -1,0 +1,29 @@
+{
+  "name": "blog-vitepress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "allowJs": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "@duskmoon/vue3-typed-js": "^0.0.4",
+    "@element-plus/icons-vue": "^2.1.0",
+    "@types/fs-extra": "^11.0.1",
+    "directory-tree": "^3.5.1",
+    "element-plus": "^2.3.3",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vitepress": "^1.0.0-alpha.72",
+    "vue": "^3.2.47"
+  }
+}
