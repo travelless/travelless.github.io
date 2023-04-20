@@ -24,7 +24,7 @@ jobs:
         with:
           # personal_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: docs/.vitepress/dist
-          deploy_key: ${{ secrets.newSSH }}
+          deploy_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           branch: master
           # folder: docs/.vitepress/dist
           
