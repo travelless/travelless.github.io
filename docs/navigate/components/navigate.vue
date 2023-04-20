@@ -13,7 +13,7 @@
     </el-main>
     <el-aside class="aside">
       <el-main class="asideMain">
-        侧边栏，暂时没想好写什么
+        侧边栏，暂时没想好写什么东西
       </el-main>
       <div>
         <el-main class="asideContainer" >
