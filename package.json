@@ -5,6 +5,7 @@
   "license": "MIT",
   "allowJs": true,
   "type": "module",
+  "homepage": "https://github.com/travelless/myblog-vitepress",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
