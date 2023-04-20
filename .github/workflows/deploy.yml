@@ -22,7 +22,11 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_NAME: travelless/travelless.github.io
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: docs/.vitepress/dist # The folder the action should deploy.
           # deploy_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-          branch: master
-          folder: docs/.vitepress/dist
+          # branch: master
+          # folder: docs/.vitepress/dist
           
