@@ -7,7 +7,6 @@ import { getSideBar } from './getSideBar.js'
 
 export default defineConfig({
   title: 'FM talk', // 标题
-  base: '/blog-vitepress/',
   themeConfig: {
     socialLinks: [
       { icon: "github", link: "https://github.com" },
