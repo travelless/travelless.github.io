@@ -7,11 +7,12 @@
   <el-container class="main">
     <el-main>
       <div class="modules">
+        <module icon='/todo.jpg' type=todo title=todoList intro=代办事项记录></module>
         <module icon='/ts.webp' type=ts title=TS-study intro=暂时为ts及相关的学习笔记学习></module>
         <module icon='/daily.jpg' type=daily title=日常生活事 intro=记录一些日常生活的趣事或者思考></module>
       </div>
     </el-main>
-    <el-aside class="aside">
+    <!-- <el-aside class="aside">
       <el-main class="asideMain">
         侧边栏，暂时没想好写什么
       </el-main>
@@ -21,7 +22,7 @@
         </el-main>
       </div>
       
-    </el-aside>
+    </el-aside> -->
 
   </el-container>
   
