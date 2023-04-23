@@ -5,6 +5,9 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { getSideBar } from './getSideBar.js'
 
+
+
+
 export default defineConfig({
   title: 'FM talk', // 标题
   themeConfig: {
@@ -14,11 +17,12 @@ export default defineConfig({
     nav: [
           { text: "Navigate", link: "/navigate/" , },
         ],
-    sidebar: {
-      "/mdBase/ts/": getSideBar("ts", "TS"),
-      "/mdBase/daily/": getSideBar("daily", "Daily"),
-      "/mdBase/todo": getSideBar("todo", "todoList"),
-    }
+    sidebar: getSideBar(),
+    // sidebar: {
+    //   "/mdBase/ts/": getSideBar("ts", "TS"),
+    //   "/mdBase/daily/": getSideBar("daily", "Daily"),
+    //   "/mdBase/todo": getSideBar("todo", "todoList"),
+    // }
   },
   plugins: [
     vue(),

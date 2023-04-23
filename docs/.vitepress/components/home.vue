@@ -3,9 +3,9 @@ import { Typed } from "@duskmoon/vue3-typed-js";
 import type { TypedOptions } from "@duskmoon/vue3-typed-js";
 import { ref, watch, reactive, onMounted, watchEffect, toRef } from "vue";
 const options: TypedOptions = {
-  strings: ["/*let\'s record the world , form now , but not only now .*/"],
+  strings: ["This is a story of firstmeet."],
   loop: true,
-  typeSpeed: 30,
+  typeSpeed: 25,
   backDelay: 1500,
 };
 
@@ -17,9 +17,9 @@ const options: TypedOptions = {
   <div class="Welcome">
 
 
-    <div class="title">Welcome Stranger
+    <div class="title">Coding World.
       <Typed class="typedBox" :options="options">
-        <div class="typing"></div>
+        /*&nbsp;<div class="typing"></div>&nbsp;*/
       </Typed>
     </div>
   </div>
@@ -38,7 +38,8 @@ const options: TypedOptions = {
     margin: auto;
     font-size: 2.5em;
     .typedBox{
-      margin: 0.2em 0;
+      justify-content: center;
+      margin: 1em 0.2em;
       display: flex;
       font-size: 0.5em;
     }

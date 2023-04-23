@@ -1,13 +1,18 @@
-import * as path from 'path'
 import directoryTree  from 'directory-tree'
 import { fileURLToPath } from 'url';
 import * as fs from 'fs';
-export function getSideBar(type, text){
-  let __dirname = path.dirname(fileURLToPath(import.meta.url));
-  // mdBase/...
-  let baseUrl = path.resolve(__dirname, "../mdBase");
+import * as path from 'path'
+
+let __dirname = path.dirname(fileURLToPath(import.meta.url));  
+// .../mdBase/...   存放数据的目录
+let dataBase = path.resolve(__dirname, "../mdBase");
+
+
+// 通过文件夹名字获取侧边栏数据
+function getSideBarData(type){
+
   // eg: mdBase/ts
-  baseUrl = path.join(baseUrl, type);
+  let baseUrl = path.join(dataBase, type);
   
   let theDir = directoryTree(baseUrl, {
     extensions: /\.md$/,
@@ -21,7 +26,6 @@ export function getSideBar(type, text){
   // console.log(children);
   for(let i in children){
     let item = {};
-
     // text
     if(children[i].name.split(".")[0] === 'index'){
       item.text = router;
@@ -29,18 +33,15 @@ export function getSideBar(type, text){
     else{
       item.text = children[i].name.split(".")[0]; // 123
     }
-    
     // link
     item.link = `/${baseUrl}/${children[i].name.split(".")[0]}`;
-
     // createTime
     item.createTime = new Date(fs.statSync(children[i].path).ctime)
     item.createTime = item.createTime.getTime()
-
     last.push(item);
   }
   let result = [{
-    text: text,
+    text: type.toUpperCase(),
     items: last,
   }]
   result[0].items.sort(function(a, b) {
@@ -50,5 +51,23 @@ export function getSideBar(type, text){
   return result;
 }
 
+export function getSideBar(){
 
-// getSideBar("ts", "TS")
+  //获取目录下文件（全部知识库）
+  let items = fs.readdirSync(dataBase);
+  // console.log("mdBase下的文件夹:",items);
+  //侧边栏路由
+  let sideBarName = []
+  for(let item of items){
+    sideBarName.push('/mdBase/' + item + '/')
+  }
+  // console.log('侧边栏路由:'+sideBarName);
+
+  let sidebar = {}
+
+  for(let item of sideBarName){
+    sidebar[item] = getSideBarData(item.split("/")[2])
+  }
+  // console.log('侧边栏对象:',sidebar)
+  return sidebar
+}
