@@ -18,11 +18,6 @@ export default defineConfig({
           { text: "Navigate", link: "/navigate/" , },
         ],
     sidebar: getSideBar(),
-    // sidebar: {
-    //   "/mdBase/ts/": getSideBar("ts", "TS"),
-    //   "/mdBase/daily/": getSideBar("daily", "Daily"),
-    //   "/mdBase/todo": getSideBar("todo", "todoList"),
-    // }
   },
   plugins: [
     vue(),

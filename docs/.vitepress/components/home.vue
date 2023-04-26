@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Typed } from "@duskmoon/vue3-typed-js";
 import type { TypedOptions } from "@duskmoon/vue3-typed-js";
-import { ref, watch, reactive, onMounted, watchEffect, toRef } from "vue";
 const options: TypedOptions = {
   strings: ["This is a story of firstmeet."],
   loop: true,
@@ -10,13 +9,10 @@ const options: TypedOptions = {
 };
 
 
-
 </script>
 
 <template>
   <div class="Welcome">
-
-
     <div class="title">Coding World.
       <Typed class="typedBox" :options="options">
         /*&nbsp;<div class="typing"></div>&nbsp;*/
