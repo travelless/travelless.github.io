@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o,z as s}from"./chunks/framework.7e954154.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"mdBase/todo/index.md"}'),a={name:"mdBase/todo/index.md"},n=s("p",null,"#todoList",-1),d=[n];function r(c,i,_,p,l,m){return t(),o("div",null,d)}const x=e(a,[["render",r]]);export{u as __pageData,x as default};
