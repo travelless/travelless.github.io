@@ -1,6 +1,6 @@
 <template>
   <a class="module" :href=link>
-    <img class="image" :src="icon" alt="image" />
+    <img class="image" :src="icon" alt="image" v-if="icon"/>
     <div class="bottom">
       <div class="title">
         <div class="T">{{ title }}</div>
