@@ -25,3 +25,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: docs/.vitepress/dist
+          cname: firstmeet.store
