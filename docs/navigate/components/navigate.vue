@@ -5,7 +5,6 @@
 
 <template>
   <el-container class="main">
-    <button @click="touch">123</button>
     <el-main>
       <div class="modules">
         <module icon='/todo.jpg' type=todo title=todoList intro=代办事项记录></module>
