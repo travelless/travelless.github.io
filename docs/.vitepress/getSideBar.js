@@ -9,7 +9,7 @@ let dataBase = path.resolve(__dirname, "../mdBase");
 
 
 // 通过文件夹名字获取侧边栏数据
-function getSideBarData(type){
+export function getSideBarData(type){
 
   // eg: mdBase/ts
   let baseUrl = path.join(dataBase, type);
@@ -22,7 +22,6 @@ function getSideBarData(type){
   baseUrl = "mdBase/"+router; // /mdBase/ts
   let children = theDir.children
   let last = [];
-  let time
   // console.log(children);
   for(let i in children){
     let item = {};
@@ -36,16 +35,16 @@ function getSideBarData(type){
     // link
     item.link = `/${baseUrl}/${children[i].name.split(".")[0]}`;
     // createTime
-    item.createTime = new Date(fs.statSync(children[i].path).ctime)
-    item.createTime = item.createTime.getTime()
+    item.stat = fs.statSync(children[i].path)
     last.push(item);
   }
+
   let result = [{
     text: type.toUpperCase(),
     items: last,
   }]
   result[0].items.sort(function(a, b) {
-    return b.createTime < a.createTime ? -1 : 1
+    return b.stat.birthtimeMs > a.stat.birthtimeMs ? -1 : 1
   })
   // console.log(result[0].items);
   return result;
@@ -64,10 +63,12 @@ export function getSideBar(){
   // console.log('侧边栏路由:'+sideBarName);
 
   let sidebar = {}
-
   for(let item of sideBarName){
     sidebar[item] = getSideBarData(item.split("/")[2])
   }
   // console.log('侧边栏对象:',sidebar)
+  // console.log('侧边栏对象:',fileTree);
   return sidebar
 }
+
+// getSideBar()

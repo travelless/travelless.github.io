@@ -4,12 +4,12 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { getSideBar } from './getSideBar.js'
-
-
-
+import { getFileTree } from './getFileTree'
 
 export default defineConfig({
   title: 'FM talk', // 标题
+  watch: ['./docs/public/*'], // 监听文件变化
+  lastUpdated: true, // 最后更新时间
   themeConfig: {
     socialLinks: [
       { icon: "github", link: "https://github.com" },
@@ -17,6 +17,10 @@ export default defineConfig({
     nav: [
           { text: "Navigate", link: "/navigate/" , },
         ],
+    docFooter: {
+      prev: 'prev',
+      next: 'next'
+    },
     sidebar: getSideBar(),
   },
   plugins: [
@@ -28,4 +32,8 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
+  buildEnd: getFileTree(),
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 });
