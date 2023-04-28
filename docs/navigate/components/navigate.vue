@@ -51,10 +51,10 @@
       transition:all 1s;
       .types{
         width: 100%;
-        margin: 10% 0;
+        margin: 5% 0;
         .item{
           width: 60%;
-          margin-left:10%;
+          margin-left:5%;
           display:flex;
           flex-wrap: wrap;
           transition: all 0.4s;
