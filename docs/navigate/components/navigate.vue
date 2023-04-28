@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
   import module from './module.vue'
   import fileTree from '../../src/fileTree.json'
   import { reactive, ref } from 'vue';

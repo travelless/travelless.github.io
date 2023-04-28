@@ -62,6 +62,10 @@ export function getFileTree(){
 
   fileTree.fileDetail = fileDetail
   fileTree.fileDict = fileDict
+
+  fileTree.fileDetail.sort(function(a, b) {
+    return b.stat.birthtimeMs < a.stat.birthtimeMs ? -1 : 1
+  })
   // console.log(fileTree);
   fs.writeFileSync('./docs/src/fileTree.json', JSON.stringify(fileTree))
 }
