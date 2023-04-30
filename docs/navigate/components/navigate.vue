@@ -9,12 +9,12 @@
 
 <template>
   <el-container class="main">
-    <el-main style="overflow:hidden">
+    <el-main class="near-blog">
       <div class="modules" v-for="item in fileDetail">
         <module :data="item"></module>
       </div>
     </el-main>
-    <el-main style="width:20% ;" class="body">
+    <el-main   class="body">
       <div> 博客分类 </div>
       <div class="types" v-for="item in fileDict">
         <a class="item" :href="item.link">{{ item.name }}</a>
@@ -27,22 +27,30 @@
 
 <style lang="less">
   .main{
+    flex-wrap: wrap-reverse;
+    display: flex;  
     overflow: hidden;
     transition: all 0.4s;
-    .modules{
-      width: 80%;
-      margin-left:10%;
-      margin-right:25%;
-      display:flex;
-      flex-wrap: wrap;
+    .near-blog{
+      overflow:hidden;
+      .modules{
+        width: 80%;
+        margin-left:10%;
+        margin-right:25%;
+        display:flex;
+        flex-wrap: wrap;
+      }
     }
     .body{
+      width: 20vw;
+      display: flex;
       position: relative;
       color: var(--vp-c-text-2);
       overflow: hidden;
       margin-top: 1%;
       // margin-right:10%;
       flex-wrap: wrap;
+      flex-direction: row;
       font-weight: bold;
       font-size: 160;
       background-color: var(--vp-c-bg);
@@ -50,13 +58,15 @@
       box-shadow: var(--vp-shadow-1);
       transition:all 1s;
       .types{
-        width: 100%;
+        flex-grow: 1 ;
+        display: flex;
+        flex-direction: row;
+        // width: 100%;
         margin: 5% 0;
         .item{
-          width: 60%;
+          margin-top: 20%;
           margin-left:5%;
           display:flex;
-          flex-wrap: wrap;
           transition: all 0.4s;
           &:hover{
             font-weight: bolder;
