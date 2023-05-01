@@ -37,21 +37,32 @@ function getFileDetial(){
       i.intro = ''
     }
   }
+  fileDetial.sort(function(a, b) {
+    return b.stat.birthtimeMs < a.stat.birthtimeMs ? -1 : 1
+  })
+  for(let i in fileDetial){
+    fileDetial[i].idx = parseInt(i)
+  }
+  // console.log(fileDetial);
   return fileDetial
 }
 
 function getFileDict(){
   let items = fs.readdirSync(dataBase); 
+  // console.log(dataBase);
   let fileDict = []
   for(let item of items){
     let typeItem = {}
     let link = '/mdBase/' + item + '/'
+    let itemUrl = path.join(dataBase,item)
+    let itemLenth = fs.readdirSync(itemUrl).length - 1
     typeItem.name = item
     typeItem.link = link
+    typeItem.itemLenth = itemLenth    
     fileDict.push(typeItem)
   }
-  return fileDict
   // console.log(fileDict);
+  return fileDict
 }
 
 export function getFileTree(){

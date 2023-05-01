@@ -8,7 +8,6 @@ import { getFileTree } from './getFileTree'
 
 export default defineConfig({
   title: 'FM talk', // 标题
-  watch: ['./docs/public/*'], // 监听文件变化
   lastUpdated: true, // 最后更新时间
   themeConfig: {
     socialLinks: [
@@ -16,6 +15,7 @@ export default defineConfig({
     ],
     nav: [
           { text: "Navigate", link: "/navigate/" , },
+          { text: "Blogs", link: "/blogs/" , },
         ],
     docFooter: {
       prev: 'prev',
