@@ -14,3 +14,28 @@ intro: 这就是todoList！！！！
    3. 增加git hook，根据新增内容（eg：新增分类 xx / xx 分类中新增文档 xx ）自动编写git commit内容。
 3. 思考如何将从语雀后端得到的doc结构直接合并到vitepress中。
    1. 初步思路：从后端获取doc结构后根据 yarn setup 或yarn post 等接口新增至本地，然后自动git push，自动部署。
+
+- [ ] test
+
+- [x] test2
+
+- [x] test4
+
+
+
+
+
+​	
+
+
+
+
+
+
+
+
+
+
+
+
+

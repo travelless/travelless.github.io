@@ -68,6 +68,14 @@
         display: flex;
         margin-top: 2%;
         justify-content: center;
+        .is-background{
+          background-color: yellow !important;
+          color: white !important;
+        }
+        .is-active{
+          background-color: yellow !important;
+          color: white !important;
+        }
       }
     }
   }
