@@ -22,6 +22,7 @@ intro: 操作系统实验三，通过共享文件内存的方式实现进程间�
 原型声明
 
 ```c
+#include <sys/shm.h>
 int shmget(key_t key, size_t size, int shmflg);
 ```
 
@@ -36,11 +37,12 @@ int shmget(key_t key, size_t size, int shmflg);
 
 ### shmat()函数
 
-作用：启动进程对该共享内存的访问，并把共享内存连接到当前进程的地址空间。
+作用：启动进程对该共享内存的访问，并把共享内存连接到当前进程的地址空间,返回一个指向共享内存第一个字节的指针(此处用ret表示)。
 
 原型声明
 
 ```c
+#include <sys/shm.h>
 void *shmat(int shm_id, const void *shm_addr, int shm_flg);
 ```
 
@@ -49,6 +51,7 @@ void *shmat(int shm_id, const void *shm_addr, int shm_flg);
 - shm_id -- int类型 由shmget()函数返回的共享内存标识。
 - shm_addr -- 表示共享内存连接到当前进程的地址位置，通常为空，此时系统自动分配。
 - shm_flg -- int类型 一组标识位，通常为0。
+- ret -- 任意类型指针 指向共享内存第一个字节。
 
 ## 代码实现
 
@@ -228,9 +231,9 @@ sem_t * mutex;
 
 void Init()
 {
-    key = KEY_NUM;                  //init key
-    shmid  = GetShmId(key);         // init shared memory
-    shmptr = shmat(shmid,NULL,0);       // attach segement to vitural ...?
+    key = KEY_NUM;
+    shmid  = GetShmId(key);
+    shmptr = shmat(shmid,NULL,0);
     //semaphore init
     full = sem_open(FULL_NAME,O_CREAT);
     mutex = sem_open(MUTEX_NAME,O_CREAT);
@@ -307,3 +310,8 @@ int main(int argc, char const *argv[])
 }
 ```
 
+### 参考文献
+
+[Linux进程管理](https://blog.csdn.net/zyf2333/article/details/80246814)
+
+[Linux进程间通信（六）](https://www.cnblogs.com/52php/p/5861372.html)

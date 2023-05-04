@@ -68,13 +68,29 @@
         display: flex;
         margin-top: 2%;
         justify-content: center;
-        .is-background{
-          background-color: yellow !important;
-          color: white !important;
+        li{
+          background-color: var(--vp-c-bg) !important;
+          color: var(--vp-c-text-1);
+          &:hover{
+            color: var(--vp-c-brand) !important;
+          }
+        }
+        button{
+          background-color: var(--vp-c-bg) !important;
+          color: var(--vp-c-text-1) !important;
+          &:hover{
+            color: var(--vp-c-brand) !important;
+          }
+        }
+        .btn-prev:disabled{
+          color: var(--vp-c-text-1) !important;
+        }
+        .btn-next:disabled{
+          color: var(--vp-c-text-1) !important;
         }
         .is-active{
-          background-color: yellow !important;
-          color: white !important;
+          // background-color:black  !important;
+          color: var(--vp-c-brand) !important;
         }
       }
     }
