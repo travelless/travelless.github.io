@@ -18,6 +18,7 @@ export function getSideBarData(type){
     extensions: /\.md$/,
     normalizePath: true,
   });
+  console.log(theDir);
   let router = theDir.name // ts
   baseUrl = "mdBase/"+router; // /mdBase/ts
   let children = theDir.children
@@ -25,6 +26,7 @@ export function getSideBarData(type){
   // console.log(children);
   for(let i in children){
     let item = {};
+    if(children[i].children !== undefined) continue;
     // text
     if(children[i].name.split(".")[0] === 'index'){
       item.text = router;
