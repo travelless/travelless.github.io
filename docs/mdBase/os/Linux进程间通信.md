@@ -53,6 +53,27 @@ void *shmat(int shm_id, const void *shm_addr, int shm_flg);
 - shm_flg -- int类型 一组标识位，通常为0。
 - ret -- 任意类型指针 指向共享内存第一个字节。
 
+### shmdt()函数
+
+作用：断开与共享内存附加点的地址，禁止本进程访问此片共享内存
+
+原型声明
+
+```c
+#include <sys/types.h>
+#include <sys/shm.h>
+int shmdt(const void *shmaddr)
+```
+
+参数解析
+
+- shmaddr：连接的共享内存的起始地址
+
+
+附加说明
+
+本函数调用并不删除所指定的共享内存区，而只是将先前用shmat函数连接（attach）好的共享内存脱离（detach）目前的进程
+
 ### 参考文献
 
 [Linux进程管理](https://blog.csdn.net/zyf2333/article/details/80246814)
