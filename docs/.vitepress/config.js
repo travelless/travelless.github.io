@@ -3,25 +3,30 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import { getSideBar } from './getSideBar.js'
-import { getFileTree } from './getFileTree'
+import { getPosts } from './theme/getPosts.js'  
+
+const pageSize = 6
 
 export default defineConfig({
   title: 'FM talk', // 标题
   lastUpdated: true, // 最后更新时间
   themeConfig: {
+    posts: await getPosts(pageSize),
     socialLinks: [
-      { icon: "github", link: "https://github.com" },
+      { icon: "github", link: "https://github.com/travelless/travelless.github.io" },
     ],
     nav: [
           { text: "Navigate", link: "/navigate/" , },
           { text: "Blogs", link: "/blogs/" , },
         ],
+    search: {
+      provider: 'local',
+    },
     docFooter: {
       prev: 'prev',
       next: 'next'
     },
-    sidebar: getSideBar(),
+    // sidebar: getSideBar(),
   },
   plugins: [
     vue(),
@@ -32,7 +37,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
-  buildEnd: getFileTree(),
+  // buildEnd: getFileTree(),
   build: {
     chunkSizeWarningLimit: 1600,
   },

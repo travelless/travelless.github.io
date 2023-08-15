@@ -1,5 +1,6 @@
 import DefaultTheme from "vitepress/theme";
 import "element-plus/dist/index.css";
+import './custom.css'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData, isServer }) => {
