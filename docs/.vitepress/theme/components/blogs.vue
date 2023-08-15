@@ -7,7 +7,7 @@
       </div>
       <p class="describe" v-html="article.frontMatter.intro"></p>
       <div class='post-info'>
-          {{ article.frontMatter.date }} <span v-for="item in article.frontMatter.tags"><a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a></span>
+          {{ article.frontMatter.date }} <span v-for="item in article.frontMatter.tags"><a :href="withBase(`/navigate/?tag=${item}`)"> {{ item }}</a></span>
       </div>
   </div>
 

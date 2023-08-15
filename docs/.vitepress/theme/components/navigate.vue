@@ -3,9 +3,16 @@ import { useData, withBase } from "vitepress";
 import { computeTags }  from "../computeTags.js";
 import { ref } from "vue";
 
+let url = location.href.split('?')[1]
+let params = new URLSearchParams(url)
 const posts = useData().theme.value.posts;
 const tags = computeTags(posts);
 const selectedTag = ref([]);
+for (let item of tags) {
+  if(item[0] === params.get('tag')){
+    selectedTag.value = item[1];
+  }
+}
 const selectTag = (item) =>{
   selectedTag.value = item[1];
 }

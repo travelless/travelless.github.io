@@ -10,6 +10,7 @@ const pageSize = 6
 export default defineConfig({
   title: 'FM talk', // 标题
   lastUpdated: true, // 最后更新时间
+  ignoreDeadLinks: true, // 忽略死链接
   themeConfig: {
     posts: await getPosts(pageSize),
     socialLinks: [
