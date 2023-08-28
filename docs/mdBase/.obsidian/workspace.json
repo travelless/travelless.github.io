@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "06384e7d2b0311b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e6f7a7d4f461b45",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c11ab86423a0584",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux系统指令学习.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dad8e47af9b7732a",
+    "type": "split",
+    "children": [
+      {
+        "id": "382591b7e3e7efdb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f67bd16e6ff4a6a5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "478b21cfa54021cb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6b18223a789b7913",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6875217a1b5c9efd",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb6a49cb4735cf2c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86bcc8e776002e51",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "linux系统指令学习.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "749f569638e8322e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "linux系统指令学习.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "057acf6bd245ba13",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "669e3e0348b13c18",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "linux系统指令学习.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "6c11ab86423a0584",
+  "lastOpenFiles": [
+    "Linux进程间通信.md",
+    "烤面筋.md",
+    "js中的数据结构.md",
+    "linux系统指令学习.md",
+    "serverless.md",
+    "全栈开发.md",
+    "前端开发-vue3的使用.md",
+    "博客部署.md",
+    "blog-template/blog-template.md",
+    "test.md",
+    "未命名 1",
+    "未命名",
+    "blog-template",
+    "blog-template.md",
+    "啊.md"
+  ]
+}
