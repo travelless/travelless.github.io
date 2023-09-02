@@ -25,8 +25,18 @@ onMounted(()=>{
 </template>
 
 <style scoped>
-  #gitalk-container{
-    margin-left: 30%;
-    width: 40%;
+
+  @media (width <= 550px) {
+    #gitalk-container{
+      margin-left: 10%;
+      width: 80%;
+    }
+  }    
+  @media (width >= 1100px) {
+    #gitalk-container{
+      margin-left: 30%;
+      width: 40%;
+    }
   }
+  
 </style>

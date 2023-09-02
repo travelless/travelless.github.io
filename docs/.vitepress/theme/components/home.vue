@@ -27,6 +27,7 @@ const options: TypedOptions = {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 100vw;
   font-family: var(--vp-font-family-base);
   color: var(--vp-c-text-1);
   .title {
