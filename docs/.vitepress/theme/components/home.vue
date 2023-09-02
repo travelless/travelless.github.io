@@ -32,6 +32,7 @@ const options: TypedOptions = {
   .title {
     margin: auto;
     font-size: 2.5em;
+    width: 100vw;
     .typedBox{
       justify-content: center;
       margin: 1em 0.2em;
