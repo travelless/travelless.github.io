@@ -16,7 +16,7 @@ jobs:
           node-version: 16
       - run: npm i yarn -g
       - run: yarn install --frozen-lockfile
-      - run: echo ${{ secrets.VITE_TEST_SECTET }} > .env
+      - run: echo VITE_TEST_SECTET=${{ secrets.VITE_TEST_SECTET }} > .env
 
       - name: Build
         run: yarn build
