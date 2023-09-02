@@ -3,6 +3,8 @@ import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
 import { onMounted } from 'vue' 
 
+console.log(import.meta.env.VITE_TEST_SECTET);
+
 const config = {
   clientID: '5663f5222dc80679220c',
   clientSecret: import.meta.env.VITE_TEST_SECTET,
