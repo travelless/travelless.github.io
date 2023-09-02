@@ -21,7 +21,6 @@ onMounted(()=>{
   gitalk.render('gitalk-container')
 })
 </script>
-
 <template>
   <div id="gitalk-container"></div>
 </template>
