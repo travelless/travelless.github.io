@@ -38,5 +38,4 @@ onMounted(()=>{
       width: 40%;
     }
   }
-  
 </style>
