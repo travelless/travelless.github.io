@@ -40,6 +40,5 @@ const options: TypedOptions = {
       font-size: 0.5em;
     }
   }
-  
 }
 </style>
