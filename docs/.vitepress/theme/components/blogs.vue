@@ -123,4 +123,5 @@ const props = defineProps({
       margin: 0.5rem 0 1rem;
   }
 }
+
 </style>
