@@ -19,6 +19,7 @@ export default defineConfig({
     nav: [
           { text: "Navigate", link: "/navigate/" , },
           { text: "Blogs", link: "/blogs/" , },
+          { text: "Comment", link: "/comment/" ,},
         ],
     search: {
       provider: 'local',

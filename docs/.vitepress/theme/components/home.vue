@@ -24,7 +24,6 @@ const options: TypedOptions = {
 <style scoped lang="less">
 .Welcome {
   height: calc(~'100vh - 64px');
-  width: 100vw;
   display: flex;
   flex-direction: column;
   text-align: center;

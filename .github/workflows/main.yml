@@ -22,6 +22,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
+          VITE_TEST_SECTET: e42884ce2622263ec0e972eb8e297f450bdac916
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: docs/.vitepress/dist

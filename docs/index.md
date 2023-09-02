@@ -1,7 +1,6 @@
----
-layout: home
-title: world recorder
----
+
+
+
 <script setup>
 import home from './.vitepress/theme/components/home.vue'
 </script>
