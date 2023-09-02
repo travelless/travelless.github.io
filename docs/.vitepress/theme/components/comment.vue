@@ -29,5 +29,4 @@ onMounted(()=>{
     margin-left: 30%;
     width: 40%;
   }
-
 </style>
