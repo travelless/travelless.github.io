@@ -11,7 +11,8 @@ const config = {
   owner: 'travelless',
   admin: ['travelless'],
   id: location.pathname,      // Ensure uniqueness and length less than 50
-  distractionFreeMode: false  // Facebook-like distraction free mode
+  distractionFreeMode: false,  // Facebook-like distraction free mode
+  proxy: 'https://proxy.cors.sh/https://github.com/login/oauth/access_token'
 }
 
 const gitalk = new Gitalk(config)
