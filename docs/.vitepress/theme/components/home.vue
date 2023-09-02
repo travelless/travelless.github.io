@@ -29,7 +29,6 @@ const options: TypedOptions = {
   text-align: center;
   font-family: var(--vp-font-family-base);
   color: var(--vp-c-text-1);
-  width: 100vw;
   .title {
     margin: auto;
     font-size: 2.5em;
