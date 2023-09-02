@@ -44,7 +44,7 @@ const props = defineProps({
 .post-title {
   font-size: 1.125rem;
   font-weight: 500;
-  margin: 0.1rem 0;
+  margin: 0.1rem 0; 
 }
 .post-info {
   font-size: 12px;
