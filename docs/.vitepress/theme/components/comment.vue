@@ -8,7 +8,7 @@ console.log(import.meta.env.VITE_TEST_SECTET);
 const config = {
   clientID: '5663f5222dc80679220c',
   clientSecret: import.meta.env.VITE_TEST_SECTET,
-  repo: 'travelless.github.io ',      // The repository of store comments,
+  repo: 'travelless.github.io',      // The repository of store comments,
   owner: 'travelless',
   admin: ['travelless'],
   id: location.pathname,      // Ensure uniqueness and length less than 50
